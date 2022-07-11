@@ -1,0 +1,17 @@
+{
+  "port": {
+    "env": "NODE_PORT",
+    "default": 9000
+  },
+  "mongodb": {
+    "host": "mongo1:27017,mongo2:27018,mongo3:27019",
+    "user": "",
+    "password": "",
+    "database": "blockchain",
+    "authSource": "",
+    "replicaSet": "rs0",
+    "useNewUrlParser": true,
+    "logging": ["query", "error"],
+    "explain-slow-queries": true
+  }
+}
