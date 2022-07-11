@@ -64,5 +64,6 @@ export class BlocksService {
   ): Promise<{ parent: TransactionDto; children?: TransactionInputDto[] }> {
     const txn = await this.transactionModel.findOne({ txid: address });
     return { parent: txn };
+    //TODO: Pull vin vout transactions based on txid
   }
 }
