@@ -23,8 +23,12 @@ export class BlocksController {
   }
 
   @Get(':height/transactions')
-  async getTransactionsByBlockHeight() {}
+  async getTransactionsByBlockHeight(@Param('height') height: number) {
+    return this.blockService.getTransactionsByBlockHeight(height);
+  }
 
-  @Get(':hash/transactions')
-  async getTransactionsByBlockHash() {}
+  @Get(':address/transactions')
+  async getTransactionsByBlockHash(@Param('address') address: string) {
+    return this.blockService.getTransactionsByAddress(address);
+  }
 }

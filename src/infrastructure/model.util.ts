@@ -1,13 +1,15 @@
 import { DynamicModule } from '@nestjs/common';
 import { MongooseModule } from './mongoose.module';
 import { Schema } from 'mongoose';
-import { BlockSchema } from '../blocks/blocks.schema';
+import { BlockSchema, TransactionSchema } from '../blocks/blocks.schema';
 
 export enum ModelName {
   Block = 'block',
+  Transaction = 'transaction',
 }
 export const modelToSchemaMap: Record<ModelName, Schema> = {
   [ModelName.Block]: BlockSchema,
+  [ModelName.Transaction]: TransactionSchema,
 };
 
 export function getMongooseModuleImport(

@@ -346,3 +346,4 @@ export const BlockSchema = SchemaFactory.createForClass(Block);
 
 BlockSchema.index({ hash: 1 }, { unique: true, background: true });
 BlockSchema.index({ height: 1 }, { background: true });
+TransactionSchema.index({ txid: 1 }, { unique: true, background: true });
